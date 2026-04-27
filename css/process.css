@@ -3,400 +3,193 @@
    ========================================= */
 
 /* ============ INTRO ============ */
-.proc-intro {
-  background: var(--bg);
-  padding: 120px 0 60px;
+.proc-intro{ background: var(--bg); padding: 120px 0 60px; }
+.proc-intro-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; }
+.proc-stats{
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  padding: 32px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
 }
-
-.proc-intro-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: end;
+.proc-stat .num{
+  font-family: var(--mono); font-size: var(--fs-3xl);
+  font-weight: 500; color: var(--ink); letter-spacing: -0.03em; line-height: 1;
 }
-
-.proc-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  padding: 32px 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+.proc-stat .num .u{ color: var(--point); font-size: 0.6em; }
+.proc-stat .lbl{
+  font-size: var(--fs-sm); color: var(--mute); margin-top: 10px;
+  font-family: var(--mono); letter-spacing: 0.05em; text-transform: uppercase;
 }
-
-.proc-stat .num {
-  font-family: var(--mono);
-  font-size: var(--fs-4xl);
-  font-weight: 500;
-  color: var(--ink);
-  letter-spacing: -0.03em;
-  line-height: 1;
-}
-
-.proc-stat .num .u {
-  color: var(--point);
-  font-size: 0.6em;
-}
-
-.proc-stat .lbl {
-  font-size: var(--fs-xs);
-  color: var(--mute);
-  margin-top: 10px;
-  font-family: var(--mono);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
 
 /* ============ TIMELINE ============ */
-.timeline-wrap {
-  background: var(--bg-soft);
-  padding: 140px 0;
-}
+.timeline-wrap{ background: var(--bg-soft); padding: 140px 0; }
 
-.timeline {
-  position: relative;
-  max-width: 1000px;
-  margin: 0 auto;
+.timeline{ position: relative; max-width: 1000px; margin: 0 auto; }
+.timeline::before{
+  content: ""; position: absolute;
+  left: 40px; top: 0; bottom: 0;
+  width: 2px; background: var(--line);
 }
-
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 40px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--line);
-}
-
-.timeline::after {
-  content: "";
-  position: absolute;
-  left: 40px;
-  top: 0;
-  width: 2px;
+.timeline::after{
+  content: ""; position: absolute;
+  left: 40px; top: 0; width: 2px;
   height: var(--progress, 0%);
   background: linear-gradient(to bottom, var(--point), var(--point) 80%, transparent);
   transition: height .6s ease;
 }
 
-.tl-node {
-  position: relative;
-  padding: 48px 0 48px 100px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
+.tl-node{
+  position: relative; padding: 48px 0 48px 100px;
+  display: grid; grid-template-columns: 1fr; gap: 0;
 }
-
-.tl-node::before {
+.tl-node::before{
   content: "";
-  position: absolute;
-  left: 32px;
-  top: 56px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: var(--bg);
-  border: 2px solid var(--line);
+  position: absolute; left: 32px; top: 56px;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--bg); border: 2px solid var(--line);
   transition: background .3s, border-color .3s, transform .3s;
   z-index: 2;
 }
-
-.tl-node.active::before {
-  background: var(--point);
-  border-color: var(--point);
-  box-shadow: 0 0 0 6px rgba(46, 204, 113, 0.15);
+.tl-node.active::before{
+  background: var(--point); border-color: var(--point);
+  box-shadow: 0 0 0 6px rgba(46,204,113,0.15);
   transform: scale(1.1);
 }
 
-.tl-head {
-  display: flex;
-  align-items: baseline;
-  gap: 20px;
-  margin-bottom: 18px;
+.tl-head{
+  display: flex; align-items: baseline; gap: 20px; margin-bottom: 18px;
   flex-wrap: wrap;
 }
-
-.tl-head .num {
-  font-family: var(--mono);
-  font-size: var(--fs-xxs);
-  color: var(--point-dark);
-  letter-spacing: 0.15em;
-  background: rgba(46, 204, 113, 0.1);
-  padding: 4px 10px;
-  border-radius: 999px;
+.tl-head .num{
+  font-family: var(--mono); font-size: var(--fs-xs);
+  color: var(--point-dark); letter-spacing: 0.15em;
+  background: rgba(46,204,113,0.1); padding: 4px 10px; border-radius: 999px;
   font-weight: 600;
 }
-
-.tl-head h3 {
+.tl-head h3{
   font-size: var(--fs-xl);
-  letter-spacing: -0.02em;
-  font-weight: 700;
-  margin: 0;
+  letter-spacing: -0.02em; font-weight: 600; margin: 0;
+}
+.tl-head .dur{
+  font-family: var(--mono); font-size: var(--fs-sm);
+  color: var(--mute); margin-left: auto;
 }
 
-.tl-head .dur {
-  font-family: var(--mono);
-  font-size: var(--fs-xxs);
-  color: var(--mute);
-  margin-left: auto;
-}
-
-.tl-body {
-  background: var(--bg);
-  border-radius: 16px;
-  padding: 32px;
+.tl-body{
+  background: var(--bg); border-radius: 16px; padding: 32px;
   border: 1px solid var(--line);
   transition: box-shadow .3s, transform .3s;
 }
-
-.tl-node:hover .tl-body {
-  box-shadow: 0 20px 40px -24px rgba(33, 33, 33, 0.15);
+.tl-node:hover .tl-body{
+  box-shadow: 0 20px 40px -24px rgba(33,33,33,0.15);
   transform: translateY(-2px);
 }
-
-.tl-body p.desc {
-  color: var(--ink-2);
-  line-height: 1.75;
-  font-size: var(--fs-sm);
+.tl-body p.desc{
+  color: var(--ink-2); line-height: 1.75; font-size: var(--fs-sm);
   margin: 0 0 24px;
 }
 
-.tl-cols {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
+.tl-cols{ display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.tl-col h5{
+  font-family: var(--mono); font-size: var(--fs-sm);
+  color: var(--point-dark); letter-spacing: 0.1em;
+  text-transform: uppercase; margin: 0 0 14px;
+  padding-bottom: 10px; border-bottom: 1px dashed var(--line);
 }
-
-.tl-col h5 {
-  font-family: var(--mono);
-  font-size: var(--fs-xxs);
-  color: var(--point-dark);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin: 0 0 14px;
-  padding-bottom: 10px;
-  border-bottom: 1px dashed var(--line);
+.tl-col ul{ list-style: none; padding: 0; margin: 0; }
+.tl-col li{
+  font-size: var(--fs-sm); color: var(--ink-2); line-height: 1.7;
+  padding: 6px 0 6px 18px; position: relative;
 }
-
-.tl-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.tl-col li::before{
+  content: "·"; position: absolute; left: 4px;
+  color: var(--point); font-weight: 600;
 }
-
-.tl-col li {
-  font-size: var(--fs-xs);
-  color: var(--ink-2);
-  line-height: 1.7;
-  padding: 6px 0 6px 18px;
-  position: relative;
-}
-
-.tl-col li::before {
-  content: "·";
-  position: absolute;
-  left: 4px;
-  color: var(--point);
-  font-weight: 700;
-}
-
-.tl-col.deliv li::before {
-  content: "▸";
-  font-size: var(--fs-xxs);
-}
-
+.tl-col.deliv li::before{ content: "▸"; font-size: var(--fs-sm); }
 
 /* ============ COMMITMENT ============ */
-.commit {
-  background: var(--dark);
-  color: #fff;
-  padding: 140px 0;
-}
+.commit{ background: var(--dark); color: #fff; padding: 140px 0; }
+.commit .section-title{ color: #fff; }
+.commit .section-sub{ color: rgba(255,255,255,0.6); }
 
-.commit .section-title {
-  color: #fff;
+.commit-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.commit-card{
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 36px; border-radius: 20px;
+  transition: all .3s; position: relative;
 }
-
-.commit .section-sub {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.commit-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.commit-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 36px;
-  border-radius: 20px;
-  transition: all .3s;
-  position: relative;
-}
-
-.commit-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 36px;
-  right: 36px;
-  height: 2px;
-  background: var(--point);
-  transform: scaleX(0);
-  transform-origin: left;
+.commit-card::before{
+  content: ""; position: absolute; top: 0; left: 36px; right: 36px;
+  height: 2px; background: var(--point);
+  transform: scaleX(0); transform-origin: left;
   transition: transform .4s ease;
 }
-
-.commit-card:hover {
-  background: rgba(46, 204, 113, 0.05);
-  border-color: rgba(46, 204, 113, 0.3);
+.commit-card:hover{
+  background: rgba(46,204,113,0.05);
+  border-color: rgba(46,204,113,0.3);
 }
-
-.commit-card:hover::before {
-  transform: scaleX(1);
+.commit-card:hover::before{ transform: scaleX(1); }
+.commit-card .big{
+  font-family: var(--mono); font-size: var(--fs-3xl);
+  color: var(--point); font-weight: 500;
+  letter-spacing: -0.03em; line-height: 1; margin-bottom: 16px;
 }
-
-.commit-card .big {
-  font-family: var(--mono);
-  font-size: var(--fs-3xl);
-  color: var(--point);
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  line-height: 1;
-  margin-bottom: 16px;
-}
-
-.commit-card h4 {
-  font-size: var(--fs-base);
-  margin: 0 0 12px;
-  letter-spacing: -0.01em;
-}
-
-.commit-card p {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: var(--fs-xs);
-  line-height: 1.7;
-  margin: 0;
-}
-
+.commit-card h4{ font-size: var(--fs-base); margin: 0 0 12px; letter-spacing: -0.01em; }
+.commit-card p{ color: rgba(255,255,255,0.6); font-size: var(--fs-sm); line-height: 1.7; margin: 0; }
 
 /* ============ FAQ ============ */
-.faq {
-  background: var(--bg);
-  padding: 140px 0;
-}
-
-.faq-list {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.faq-item {
+.faq{ background: var(--bg); padding: 140px 0; }
+.faq-list{ max-width: 900px; margin: 0 auto; }
+.faq-item{
   border-top: 1px solid var(--line);
   padding: 24px 0;
   cursor: pointer;
 }
-
-.faq-item:last-child {
-  border-bottom: 1px solid var(--line);
+.faq-item:last-child{ border-bottom: 1px solid var(--line); }
+.faq-q{
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: var(--fs-base); font-weight: 600; color: var(--ink);
+  letter-spacing: -0.01em; gap: 20px;
 }
-
-.faq-q {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: var(--fs-base);
-  font-weight: 600;
-  color: var(--ink);
-  letter-spacing: -0.01em;
-  gap: 20px;
-}
-
-.faq-q .icon {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
+.faq-q .icon{
+  width: 28px; height: 28px; border-radius: 50%;
   border: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--mono);
-  font-size: var(--fs-xs);
-  color: var(--mute);
-  transition: all .25s;
-  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--mono); font-size: var(--fs-xs); color: var(--mute);
+  transition: all .25s; flex-shrink: 0;
 }
-
-.faq-item.open .faq-q .icon {
-  background: var(--point);
-  color: var(--dark);
-  border-color: var(--point);
-  transform: rotate(45deg);
+.faq-item.open .faq-q .icon{
+  background: var(--point); color: var(--dark);
+  border-color: var(--point); transform: rotate(45deg);
 }
-
-.faq-a {
-  max-height: 0;
-  overflow: hidden;
+.faq-a{
+  max-height: 0; overflow: hidden;
   transition: max-height .4s ease, padding .3s ease;
-  color: var(--mute);
-  line-height: 1.8;
-  font-size: var(--fs-sm);
+  color: var(--mute); line-height: 1.8; font-size: var(--fs-sm);
 }
-
-.faq-item.open .faq-a {
-  max-height: 400px;
-  padding-top: 18px;
+.faq-item.open .faq-a{
+  max-height: 400px; padding-top: 18px;
 }
-
 
 /* ============ RESPONSIVE ============ */
+@media (max-width: 900px){
+  .proc-intro-grid{ grid-template-columns: 1fr; gap: 40px; }
+  .timeline::before, .timeline::after{ left: 20px; }
+  .tl-node{ padding: 36px 0 36px 60px; }
+  .tl-node::before{ left: 12px; top: 44px; width: 14px; height: 14px; }
+  .tl-body{ padding: 24px; }
+  .tl-cols{ grid-template-columns: 1fr; gap: 20px; }
+  .tl-head .dur{ margin-left: 0; width: 100%; }
+  .commit-grid{ grid-template-columns: 1fr; }
+  .timeline-wrap, .commit, .faq{ padding: 80px 0; }
+}
+
+/* ============ RESPONSIVE — FONT SIZE ============ */
 @media (max-width: 900px) {
-  .proc-intro-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .proc-stat .num {
+    font-size: var(--fs-2xl);
   }
 
-  .timeline::before,
-  .timeline::after {
-    left: 20px;
-  }
-
-  .tl-node {
-    padding: 36px 0 36px 60px;
-  }
-
-  .tl-node::before {
-    left: 12px;
-    top: 44px;
-    width: 14px;
-    height: 14px;
-  }
-
-  .tl-body {
-    padding: 24px;
-  }
-
-  .tl-cols {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .tl-head .dur {
-    margin-left: 0;
-    width: 100%;
-  }
-
-  .commit-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .timeline-wrap,
-  .commit,
-  .faq {
-    padding: 80px 0;
+  .tl-head h3 {
+    font-size: var(--fs-lg);
   }
 }
