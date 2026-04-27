@@ -48,7 +48,7 @@
 .hero h1{
   font-size: var(--fs-hero);
   line-height: 1.02; letter-spacing: -0.03em;
-  font-weight: 600; margin: 0 0 28px;
+  font-weight: 500; margin: 0 0 28px;
 }
 .hero h1 .accent{ color: var(--point); font-family: var(--mono); font-weight: 500; }
 .hero h1 .em{ font-style: normal; position: relative; display: inline-block; }
@@ -58,7 +58,7 @@
   transform: skewX(-8deg);
 }
 .hero p.lead{
-  font-size: var(--fs-sm); line-height: 1.65;
+  font-size: var(--fs-base); line-height: 1.65;
   max-width: 600px; color: rgba(255,255,255,0.72); margin: 0 0 44px;
 }
 .hero-actions{ display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
@@ -127,9 +127,9 @@
 .value:hover .val-num{ color: var(--point); }
 .val-num{
   font-family: var(--mono); font-size: var(--fs-sm); color: var(--mute);
-  letter-spacing: 0.05em; transition: color .25s; margin-bottom: 32px;
+  letter-spacing: -0.5px; transition: color .25s; margin-bottom: 16px;
 }
-.val-title{ font-size: var(--fs-md); font-weight: 600; margin: 0 0 10px; letter-spacing: -0.01em; }
+.val-title{ font-size: var(--fs-md); font-weight: 600; margin: 0 0 10px; letter-spacing: 0; }
 .val-ko{ font-family: var(--mono); font-size: var(--fs-sm); color: var(--mute); margin-bottom: 14px; }
 .val-desc{ font-size: var(--fs-sm); color: var(--ink-2); line-height: 1.7; margin: 0; }
 
