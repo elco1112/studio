@@ -22,8 +22,8 @@
   --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* ---- Type scale (base: 16px, ratio: 1.250) ---- */
-  --fs-xxs:  12px;
-  --fs-xs:   14px;
+  --fs-xxs:  14px;
+  --fs-xs:   15px;
   --fs-sm:   16px;   /* 본문 최소 기준 */
   --fs-base: 18px;
   --fs-md:   20px;
@@ -40,7 +40,6 @@
   --maxw: 1240px;
   --gutter: clamp(20px, 4vw, 48px);
   --ease: cubic-bezier(.2, .7, .2, 1);
-}
 }
 
 * {
