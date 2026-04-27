@@ -1,0 +1,165 @@
+/* =========================================
+   ELCO STUDIO — SERVICES PAGE STYLES
+   ========================================= */
+
+/* ============ SERVICE NAV (sticky) ============ */
+.svc-nav-strip{
+  background: var(--bg); border-bottom: 1px solid var(--line);
+  position: sticky; top: 72px; z-index: 50;
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+}
+.svc-nav-strip-inner{
+  display: flex; gap: 8px; padding: 14px 0;
+  white-space: nowrap;
+}
+.svc-nav-strip a{
+  font-family: var(--mono); font-size: 12px;
+  color: var(--mute); padding: 10px 16px;
+  border-radius: 999px; transition: all .2s;
+  letter-spacing: 0.05em; text-transform: uppercase;
+  flex-shrink: 0;
+}
+.svc-nav-strip a:hover{ color: var(--ink); background: var(--bg-soft); }
+.svc-nav-strip a.active{
+  color: #fff; background: var(--dark);
+}
+
+/* ============ SERVICE DETAIL ============ */
+.svc-detail{ padding: 140px 0; border-bottom: 1px solid var(--line); }
+.svc-detail:nth-child(even){ background: var(--bg-soft); border-bottom: 1px solid transparent; }
+
+.svc-head{
+  display: grid; grid-template-columns: 80px 1fr auto;
+  gap: 32px; align-items: start; margin-bottom: 64px;
+  padding-bottom: 32px; border-bottom: 1px solid var(--line);
+}
+.svc-detail:nth-child(even) .svc-head{ border-bottom-color: rgba(33,33,33,0.08); }
+
+.svc-num{
+  font-family: var(--mono); font-size: 56px;
+  color: var(--point); font-weight: 500; line-height: 1;
+  letter-spacing: -0.03em;
+}
+.svc-head h2{
+  font-size: clamp(32px, 4.4vw, 52px); letter-spacing: -0.025em;
+  font-weight: 700; margin: 0 0 10px; line-height: 1.1;
+}
+.svc-head .en{
+  font-family: var(--mono); font-size: 13px; color: var(--mute);
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.svc-head .svc-tags{ display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+.svc-head .svc-tags .t{
+  font-family: var(--mono); font-size: 11px;
+  padding: 6px 12px; border-radius: 999px;
+  background: var(--dark); color: #fff; font-weight: 500;
+}
+.svc-detail:nth-child(even) .svc-head .svc-tags .t{
+  background: var(--bg); color: var(--ink-2); border: 1px solid var(--line);
+}
+
+.svc-body{
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
+}
+.svc-body .lead{
+  font-size: 18px; line-height: 1.7; color: var(--ink-2);
+  margin: 0 0 24px;
+}
+.svc-body p{ color: var(--mute); line-height: 1.8; margin: 0 0 18px; font-size: 15px; }
+
+.svc-features{ list-style: none; padding: 0; margin: 0; }
+.svc-features li{
+  display: flex; gap: 16px; padding: 16px 0;
+  border-top: 1px dashed var(--line);
+}
+.svc-features li:last-child{ border-bottom: 1px dashed var(--line); }
+.svc-features .ic{
+  flex-shrink: 0; width: 28px; height: 28px; border-radius: 8px;
+  background: var(--point); color: var(--dark);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--mono); font-size: 12px; font-weight: 700;
+}
+.svc-features .txt{ flex: 1; }
+.svc-features strong{
+  display: block; color: var(--ink); font-size: 15px; margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+.svc-features span{ color: var(--mute); font-size: 13.5px; line-height: 1.65; }
+
+/* code snippet block */
+.svc-code{
+  background: var(--dark); color: #fff;
+  border-radius: 16px; padding: 28px;
+  font-family: var(--mono); font-size: 13px; line-height: 1.9;
+  position: relative; overflow: hidden;
+}
+.svc-code::before{
+  content: attr(data-lang);
+  position: absolute; top: 16px; right: 20px;
+  font-size: 10px; letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.4); text-transform: uppercase;
+}
+.svc-code .c-key{ color: #ff7b72; }
+.svc-code .c-str{ color: var(--point); }
+.svc-code .c-tag{ color: #7ee787; }
+.svc-code .c-atr{ color: #79c0ff; }
+.svc-code .c-com{ color: rgba(255,255,255,0.4); font-style: italic; }
+.svc-code .c-pn { color: rgba(255,255,255,0.6); }
+
+/* ============ DIFFERENTIATION ============ */
+.diff{ background: var(--dark); color: #fff; padding: 140px 0; }
+.diff .section-title{ color: #fff; }
+.diff .section-sub{ color: rgba(255,255,255,0.6); }
+.diff-grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.diff-card{
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 36px; border-radius: 20px;
+  transition: transform .3s, border-color .3s, background .3s;
+}
+.diff-card:hover{
+  transform: translateY(-4px);
+  border-color: rgba(46,204,113,0.4);
+  background: rgba(46,204,113,0.04);
+}
+.diff-card .num{
+  font-family: var(--mono); font-size: 12px; color: var(--point);
+  letter-spacing: 0.1em; margin-bottom: 20px;
+}
+.diff-card h3{ font-size: 22px; margin: 0 0 14px; letter-spacing: -0.01em; }
+.diff-card p{ color: rgba(255,255,255,0.6); line-height: 1.75; font-size: 14.5px; margin: 0; }
+
+/* ============ TECH STACK ============ */
+.stack{ background: var(--bg); padding: 140px 0; }
+.stack-grid{
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px; margin-top: 32px;
+}
+.stack-item{
+  background: var(--bg-soft); border-radius: 14px;
+  padding: 24px 20px; text-align: center;
+  font-family: var(--mono); font-size: 13px; font-weight: 500;
+  color: var(--ink-2); border: 1px solid transparent;
+  transition: all .25s;
+}
+.stack-item:hover{
+  background: var(--bg); border-color: var(--point);
+  color: var(--point-dark); transform: translateY(-2px);
+}
+.stack-item .cat{
+  display: block; font-size: 10px; color: var(--mute);
+  letter-spacing: 0.1em; margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 900px){
+  .svc-head{ grid-template-columns: 60px 1fr; }
+  .svc-head .svc-tags{ grid-column: 2; justify-content: flex-start; margin-top: 8px; }
+  .svc-num{ font-size: 40px; }
+  .svc-body{ grid-template-columns: 1fr; gap: 40px; }
+  .svc-detail{ padding: 80px 0; }
+  .diff-grid{ grid-template-columns: 1fr; }
+  .diff, .stack{ padding: 80px 0; }
+  .svc-nav-strip{ top: 72px; }
+}

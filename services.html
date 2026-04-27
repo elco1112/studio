@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Services — Elco Studio</title>
+<meta name="description" content="반응형 웹 퍼블리싱, 웹 표준·접근성, SEO 최적화, UI/UX 기반 퍼블리싱. Elco Studio의 네 가지 핵심 서비스를 자세히 소개합니다." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css" />
+
+<link rel="stylesheet" href="css/common.css" />
+<link rel="stylesheet" href="css/services.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="./images/elcostudio_logo.png" alt="mainlogo">
+    </a>
+    <ul class="nav-menu">
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="process.html">Process</a></li>
+      <li><a href="clients.html">Clients</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta">Start Project →</a>
+    <button class="nav-burger" aria-label="menu">☰</button>
+  </div>
+</nav>
+<div class="nav-drawer">
+  <ul>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="process.html">Process</a></li>
+    <li><a href="clients.html">Clients</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="breadcrumb reveal">
+      <a href="index.html">HOME</a>
+      <span class="sep">/</span>
+      <span class="now">SERVICES</span>
+    </div>
+    <h1 class="page-title reveal" style="transition-delay:.1s">
+      <span class="accent">[</span> Services <span class="accent">]</span><br>
+      우리가 만드는 네 가지 웹
+    </h1>
+    <p class="page-lead reveal" style="transition-delay:.2s">
+      단순한 '화면 구현'이 아닙니다. 비즈니스 목표, 사용자의 손끝, 검색 엔진의 눈까지
+      고려한 퍼블리싱을 제공합니다. 각 서비스는 독립적이면서도 서로 연결되어 있습니다.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICE SUB NAV -->
+<div class="svc-nav-strip">
+  <div class="container">
+    <div class="svc-nav-strip-inner">
+      <a href="#responsive">01 · Responsive</a>
+      <a href="#standards">02 · Standards</a>
+      <a href="#seo">03 · SEO</a>
+      <a href="#ui-ux">04 · UI/UX</a>
+      <a href="#differentiation">차별화</a>
+      <a href="#tech-stack">기술 스택</a>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE 01 — RESPONSIVE -->
+<section class="svc-detail" id="responsive">
+  <div class="container">
+    <div class="svc-head reveal">
+      <div class="svc-num">01</div>
+      <div>
+        <h2>반응형 웹 퍼블리싱</h2>
+        <div class="en">RESPONSIVE WEB PUBLISHING</div>
+      </div>
+      <div class="svc-tags">
+        <span class="t">Mobile First</span>
+        <span class="t">Cross Browser</span>
+      </div>
+    </div>
+
+    <div class="svc-body">
+      <div>
+        <p class="lead reveal">
+          데스크톱, 태블릿, 모바일 — 모든 디바이스에서 일관되고 최적화된 사용자 경험을 제공합니다.
+        </p>
+        <p class="reveal">
+          Mobile First 원칙에 기반해 설계합니다. 가장 작은 화면에서 필요한 핵심 요소부터 시작해,
+          큰 화면으로 갈수록 풍부한 경험을 더하는 방식입니다. 이 접근은 성능에도 유리합니다 —
+          불필요한 자원을 모바일에서 로드하지 않기 때문입니다.
+        </p>
+        <p class="reveal">
+          다양한 해상도와 기기 환경을 고려한 유연한 레이아웃을 구축하며, 단순 Breakpoint
+          대응을 넘어 Fluid Typography, Container Query, clamp() 기반 가변 레이아웃을 적극 활용합니다.
+        </p>
+
+        <ul class="svc-features">
+          <li class="reveal">
+            <div class="ic">↔</div>
+            <div class="txt">
+              <strong>Fluid Layout</strong>
+              <span>고정 픽셀이 아닌 clamp(), min(), max()로 부드럽게 흐르는 레이아웃</span>
+            </div>
+          </li>
+          <li class="reveal">
+            <div class="ic">⚡</div>
+            <div class="txt">
+              <strong>Performance First</strong>
+              <span>디바이스별 이미지 최적화(picture, srcset), 지연 로딩, 코드 스플리팅</span>
+            </div>
+          </li>
+          <li class="reveal">
+            <div class="ic">✓</div>
+            <div class="txt">
+              <strong>Cross Browser 대응</strong>
+              <span>Chrome, Safari, Firefox, Edge는 물론 iOS/Android 실기기 QA 진행</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="svc-code reveal" data-lang="SCSS">
+<span class="c-com">// Fluid typography with clamp()</span><br>
+<span class="c-key">.title</span> <span class="c-pn">{</span><br>
+&nbsp;&nbsp;<span class="c-atr">font-size</span><span class="c-pn">:</span> <span class="c-key">clamp</span><span class="c-pn">(</span><span class="c-str">2rem</span><span class="c-pn">,</span> <span class="c-str">5vw</span><span class="c-pn">,</span> <span class="c-str">4.5rem</span><span class="c-pn">);</span><br>
+&nbsp;&nbsp;<span class="c-atr">line-height</span><span class="c-pn">:</span> <span class="c-str">1.1</span><span class="c-pn">;</span><br>
+<span class="c-pn">}</span><br><br>
+<span class="c-com">// Container query — parent-based</span><br>
+<span class="c-key">.card</span> <span class="c-pn">{</span><br>
+&nbsp;&nbsp;<span class="c-atr">container-type</span><span class="c-pn">:</span> <span class="c-str">inline-size</span><span class="c-pn">;</span><br>
+<span class="c-pn">}</span><br>
+<span class="c-key">@container</span> <span class="c-pn">(</span><span class="c-atr">min-width</span><span class="c-pn">:</span> <span class="c-str">480px</span><span class="c-pn">) {</span><br>
+&nbsp;&nbsp;<span class="c-key">.card__grid</span> <span class="c-pn">{</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-atr">grid-template-columns</span><span class="c-pn">:</span> <span class="c-str">1fr 1fr</span><span class="c-pn">;</span><br>
+&nbsp;&nbsp;<span class="c-pn">}</span><br>
+<span class="c-pn">}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 02 — STANDARDS -->
+<section class="svc-detail" id="standards">
+  <div class="container">
+    <div class="svc-head reveal">
+      <div class="svc-num">02</div>
+      <div>
+        <h2>웹 표준 · 접근성</h2>
+        <div class="en">STANDARDS & ACCESSIBILITY</div>
+      </div>
+      <div class="svc-tags">
+        <span class="t">W3C</span>
+        <span class="t">WCAG 2.1 AA</span>
+      </div>
+    </div>
+
+    <div class="svc-body">
+      <div class="svc-code reveal" data-lang="HTML">
+<span class="c-com">&lt;!-- Semantic structure + ARIA --&gt;</span><br>
+<span class="c-pn">&lt;</span><span class="c-tag">nav</span> <span class="c-atr">aria-label</span><span class="c-pn">=</span><span class="c-str">"Main"</span><span class="c-pn">&gt;</span><br>
+&nbsp;&nbsp;<span class="c-pn">&lt;</span><span class="c-tag">ul</span> <span class="c-atr">role</span><span class="c-pn">=</span><span class="c-str">"menubar"</span><span class="c-pn">&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-pn">&lt;</span><span class="c-tag">li</span><span class="c-pn">&gt;&lt;</span><span class="c-tag">a</span> <span class="c-atr">href</span><span class="c-pn">=</span><span class="c-str">"/about"</span><span class="c-pn">&gt;</span>About<span class="c-pn">&lt;/</span><span class="c-tag">a</span><span class="c-pn">&gt;&lt;/</span><span class="c-tag">li</span><span class="c-pn">&gt;</span><br>
+&nbsp;&nbsp;<span class="c-pn">&lt;/</span><span class="c-tag">ul</span><span class="c-pn">&gt;</span><br>
+<span class="c-pn">&lt;/</span><span class="c-tag">nav</span><span class="c-pn">&gt;</span><br><br>
+<span class="c-pn">&lt;</span><span class="c-tag">button</span><br>
+&nbsp;&nbsp;<span class="c-atr">aria-expanded</span><span class="c-pn">=</span><span class="c-str">"false"</span><br>
+&nbsp;&nbsp;<span class="c-atr">aria-controls</span><span class="c-pn">=</span><span class="c-str">"menu-list"</span><span class="c-pn">&gt;</span><br>
+&nbsp;&nbsp;메뉴 열기<br>
+<span class="c-pn">&lt;/</span><span class="c-tag">button</span><span class="c-pn">&gt;</span>
+      </div>
+
+      <div>
+        <p class="lead reveal">
+          W3C 웹 표준과 WCAG 접근성 가이드라인을 준수해, 누구든 제약 없이 콘텐츠에 접근할 수 있도록 구현합니다.
+        </p>
+        <p class="reveal">
+          접근성은 선택이 아니라 기본입니다. 시각·청각·지체 장애를 가진 사용자는 물론,
+          저속 네트워크 환경의 사용자, 키보드만으로 탐색하는 사용자, 스크린리더 사용자까지 —
+          모든 사람이 동등하게 접근할 수 있는 웹이 좋은 웹입니다.
+        </p>
+        <p class="reveal">
+          법적 요건(정보접근성)을 충족시키는 동시에, 브랜드의 사회적 신뢰도를 높이는 기반이 됩니다.
+          또한 접근성이 잘 구현된 사이트는 SEO에서도 유리합니다.
+        </p>
+
+        <ul class="svc-features">
+          <li class="reveal">
+            <div class="ic">✓</div>
+            <div class="txt">
+              <strong>시맨틱 마크업</strong>
+              <span>header, nav, main, section, article 등 의미 있는 태그 사용</span>
+            </div>
+          </li>
+          <li class="reveal">
+            <div class="ic">⌨</div>
+            <div class="txt">
+              <strong>키보드 내비게이션</strong>
+              <span>Tab, Enter, Esc만으로 모든 기능 사용 가능. Focus 스타일 명시</span>
+            </div>
+          </li>
+          <li class="reveal">
+            <div class="ic">♿</div>
+            <div class="txt">
+              <strong>ARIA 속성</strong>
+              <span>스크린리더 사용자를 위한 role, aria-label, aria-live 적절히 활용</span>
+            </div>
+          </li>
+          <li class="reveal">
+            <div class="ic">◐</div>
+            <div class="txt">
+              <strong>색상 대비 4.5:1 이상</strong>
+              <span>WCAG AA 기준 대비율을 충족하는 컬러 팔레트 검증</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 03 — SEO -->
+<section class="svc-detail" id="seo">
+  <div class="container">
+    <div class="svc-head reveal">
+      <div class="svc-num">03</div>
+      <div>
+        <h2>SEO 최적화 퍼블리싱</h2>
+        <div class="en">SEO-OPTIMIZED PUBLISHING</div>
+      </div>
+      <div class="svc-tags">
+        <span class="t">Schema.org</span>
+        <span class="t">Core Web Vitals</span>
+      </div>
+    </div>
+
+    <div class="svc-body">
+      <div>
+        <p class="lead reveal">
+          검색 엔진이 선호하는 기술적 기반을 코드 레벨부터 심어둡니다. 유기적 트래픽은 결국 구조에서 시작됩니다.
+        </p>
+        <p class="reveal">
+          SEO는 마케팅팀만의 일이 아닙니다. 시맨틱 마크업, 메타 태그, 구조화 데이터(Schema.org),
+          OpenGraph, 사이트맵, robots.txt, 페이지 속도 — 이 모든 것이 퍼블리싱 단계에서 이미 결정됩니다.
+        </p>
+        <p class="reveal">
+          Google의 Core Web Vitals(LCP, INP, CLS) 지표는 이제 검색 순위에 직접 영향을 미칩니다.
+          이미지 포맷(WebP/AVIF), 폰트 로딩 전략, Critical CSS, Lazy Loading까지 —
+          퍼포먼스가 곧 SEO인 시대입니다.
+        </p>
+
+        <ul class="svc-features">
+          <li class="reveal">
+            <div class="ic">🔍</div>
+            <div class="txt">
+              <strong>Structured Data</strong>
+              <span>Schema.org JSON-LD로 Article, Product, Organization 등 리치 결과 대응</span>
+            </div>
+          </li>
+          <li class="reveal">
+            <div class="ic">📱</div>
+            <div class="txt">
+              <strong>OpenGraph · Twitter Card</strong>
+              <span>SNS 공유 시 정확한 미리보기를 위한 메타 태그 체계화</span>
+            </div>
+          </li>
+          <li class="reveal">
+            <div class="ic">⚡</div>
+            <div class="txt">
+              <strong>Core Web Vitals 최적화</strong>
+              <span>LCP 2.5s 이하, INP 200ms 이하, CLS 0.1 이하 목표</span>
+            </div>
+          </li>
+          <li class="reveal">
+            <div class="ic">🗺</div>
+            <div class="txt">
+              <strong>sitemap.xml · robots.txt</strong>
+              <span>크롤러가 사이트 구조를 정확히 이해할 수 있도록 설정</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="svc-code reveal" data-lang="JSON-LD">
+<span class="c-pn">{</span><br>
+&nbsp;&nbsp;<span class="c-str">"@context"</span><span class="c-pn">:</span> <span class="c-str">"https://schema.org"</span><span class="c-pn">,</span><br>
+&nbsp;&nbsp;<span class="c-str">"@type"</span><span class="c-pn">:</span> <span class="c-str">"Organization"</span><span class="c-pn">,</span><br>
+&nbsp;&nbsp;<span class="c-str">"name"</span><span class="c-pn">:</span> <span class="c-str">"Elco Studio"</span><span class="c-pn">,</span><br>
+&nbsp;&nbsp;<span class="c-str">"url"</span><span class="c-pn">:</span> <span class="c-str">"https://elcostudio.kr"</span><span class="c-pn">,</span><br>
+&nbsp;&nbsp;<span class="c-str">"logo"</span><span class="c-pn">:</span> <span class="c-str">"/logo.png"</span><span class="c-pn">,</span><br>
+&nbsp;&nbsp;<span class="c-str">"sameAs"</span><span class="c-pn">: [</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"https://instagram.com/..."</span><span class="c-pn">,</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"https://linkedin.com/..."</span><br>
+&nbsp;&nbsp;<span class="c-pn">],</span><br>
+&nbsp;&nbsp;<span class="c-str">"contactPoint"</span><span class="c-pn">: {</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"@type"</span><span class="c-pn">:</span> <span class="c-str">"ContactPoint"</span><span class="c-pn">,</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"email"</span><span class="c-pn">:</span> <span class="c-str">"hello@elcostudio.kr"</span><br>
+&nbsp;&nbsp;<span class="c-pn">}</span><br>
+<span class="c-pn">}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 04 — UI/UX -->
+<section class="svc-detail" id="ui-ux">
+  <div class="container">
+    <div class="svc-head reveal">
+      <div class="svc-num">04</div>
+      <div>
+        <h2>UI/UX 기반 퍼블리싱</h2>
+        <div class="en">UI/UX-DRIVEN PUBLISHING</div>
+      </div>
+      <div class="svc-tags">
+        <span class="t">Conversion</span>
+        <span class="t">GSAP · Motion</span>
+      </div>
+    </div>
+
+    <div class="svc-body">
+      <div class="svc-code reveal" data-lang="JavaScript">
+<span class="c-com">// GSAP scroll-triggered reveal</span><br>
+<span class="c-key">import</span> <span class="c-pn">{</span> gsap <span class="c-pn">}</span> <span class="c-key">from</span> <span class="c-str">'gsap'</span><span class="c-pn">;</span><br>
+<span class="c-key">import</span> <span class="c-pn">{</span> ScrollTrigger <span class="c-pn">}</span> <span class="c-key">from</span> <span class="c-str">'gsap/ScrollTrigger'</span><span class="c-pn">;</span><br><br>
+gsap<span class="c-pn">.</span><span class="c-atr">registerPlugin</span><span class="c-pn">(</span>ScrollTrigger<span class="c-pn">);</span><br><br>
+gsap<span class="c-pn">.</span><span class="c-atr">from</span><span class="c-pn">(</span><span class="c-str">'.card'</span><span class="c-pn">, {</span><br>
+&nbsp;&nbsp;<span class="c-atr">y</span><span class="c-pn">:</span> <span class="c-str">60</span><span class="c-pn">,</span><br>
+&nbsp;&nbsp;<span class="c-atr">opacity</span><span class="c-pn">:</span> <span class="c-str">0</span><span class="c-pn">,</span><br>
+&nbsp;&nbsp;<span class="c-atr">stagger</span><span class="c-pn">:</span> <span class="c-str">0.12</span><span class="c-pn">,</span><br>
+&nbsp;&nbsp;<span class="c-atr">duration</span><span class="c-pn">:</span> <span class="c-str">0.8</span><span class="c-pn">,</span><br>
+&nbsp;&nbsp;<span class="c-atr">ease</span><span class="c-pn">:</span> <span class="c-str">'power3.out'</span><span class="c-pn">,</span><br>
+&nbsp;&nbsp;<span class="c-atr">scrollTrigger</span><span class="c-pn">: {</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-atr">trigger</span><span class="c-pn">:</span> <span class="c-str">'.grid'</span><span class="c-pn">,</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-atr">start</span><span class="c-pn">:</span> <span class="c-str">'top 80%'</span><br>
+&nbsp;&nbsp;<span class="c-pn">}</span><br>
+<span class="c-pn">});</span>
+      </div>
+
+      <div>
+        <p class="lead reveal">
+          사용자 행동과 흐름을 고려한 인터페이스 설계로, 전환율(Conversion Rate)을 높이는 웹 경험을 구축합니다.
+        </p>
+        <p class="reveal">
+          디자이너의 시안은 출발점이지 종착지가 아닙니다. 사용자가 실제로 어떻게 움직이는지 —
+          스크롤 속도, 클릭 타이밍, 호버 피드백, 로딩 중의 감정까지 — 세밀하게 고려해야 의도된 여정이 완성됩니다.
+        </p>
+        <p class="reveal">
+          디자이너와의 긴밀한 협업을 통해 의도된 사용자 여정을 정확히 구현하고,
+          GSAP·Motion 기반 스크롤 인터랙션과 마이크로 인터랙션을 더해 기억에 남는 경험을 만듭니다.
+        </p>
+
+        <ul class="svc-features">
+          <li class="reveal">
+            <div class="ic">🎯</div>
+            <div class="txt">
+              <strong>Conversion Rate 최적화</strong>
+              <span>CTA 배치, 스크롤 뎁스, 폼 UX 개선으로 실질적 전환율 향상</span>
+            </div>
+          </li>
+          <li class="reveal">
+            <div class="ic">✦</div>
+            <div class="txt">
+              <strong>Micro-interaction</strong>
+              <span>호버, 포커스, 로딩 순간의 작은 피드백이 만드는 세련된 경험</span>
+            </div>
+          </li>
+          <li class="reveal">
+            <div class="ic">⟳</div>
+            <div class="txt">
+              <strong>Scroll-driven Animation</strong>
+              <span>GSAP ScrollTrigger, IntersectionObserver로 스토리텔링형 스크롤 설계</span>
+            </div>
+          </li>
+          <li class="reveal">
+            <div class="ic">◐</div>
+            <div class="txt">
+              <strong>Prefers-reduced-motion 대응</strong>
+              <span>모션 민감 사용자를 위한 대체 UI 제공. 접근성과 미학의 양립</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENTIATION -->
+<section class="diff" id="differentiation">
+  <div class="container">
+    <div class="section-label" style="color:var(--point);">Differentiation</div>
+    <h2 class="section-title reveal">왜 Elco Studio인가.</h2>
+    <p class="section-sub reveal">
+      저가형 템플릿과 대형 에이전시 사이, '품질과 가격의 균형'이라는 포지션을 차지합니다.
+    </p>
+
+    <div class="diff-grid">
+      <div class="diff-card reveal">
+        <div class="num">01 / DIFF</div>
+        <h3>고객 맞춤형 컨설팅</h3>
+        <p>프로젝트 시작 전, 고객의 비즈니스 모델과 목표 사용자를 깊이 있게 이해하는 사전 컨설팅을 진행합니다. 단순 시안 구현이 아닌 비즈니스에 최적화된 솔루션을 제안합니다.</p>
+      </div>
+      <div class="diff-card reveal" style="transition-delay:.1s">
+        <div class="num">02 / DIFF</div>
+        <h3>투명한 커뮤니케이션</h3>
+        <p>프로젝트 관리 도구로 진행 상황을 실시간 공유하며, 주간 리포트와 정기 미팅으로 피드백을 빠르게 반영합니다. 고객은 언제든 프로젝트의 현재를 볼 수 있습니다.</p>
+      </div>
+      <div class="diff-card reveal" style="transition-delay:.2s">
+        <div class="num">03 / DIFF</div>
+        <h3>사후 관리 · 유지보수</h3>
+        <p>런칭이 끝이 아닌 시작이라는 관점에서, 최소 3개월의 무상 유지보수를 기본 제공하며 이후에도 합리적 비용의 기술 지원 플랜을 운영합니다.</p>
+      </div>
+      <div class="diff-card reveal" style="transition-delay:.3s">
+        <div class="num">04 / DIFF</div>
+        <h3>최신 웹 기술 적용</h3>
+        <p>HTML5, CSS3, Modern JS(ES6+), SCSS, GSAP를 적극 활용하며, 필요 시 React/Vue 연계 퍼블리싱도 지원합니다. 끊임없이 학습하는 문화로 품질을 올립니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section class="stack" id="tech-stack">
+  <div class="container">
+    <div class="section-label">Tech Stack</div>
+    <h2 class="section-title reveal">우리가 쓰는 도구들.</h2>
+    <p class="section-sub reveal">
+      최신 웹 기술을 적극 활용하되, 유행이 아닌 '왜 이 기술을 쓰는가'를 먼저 묻습니다.
+    </p>
+
+    <div class="stack-grid">
+      <div class="stack-item reveal"><span class="cat">Markup</span>HTML5</div>
+      <div class="stack-item reveal"><span class="cat">Style</span>CSS3 / SCSS</div>
+      <div class="stack-item reveal"><span class="cat">Script</span>JavaScript (ES6+)</div>
+      <div class="stack-item reveal"><span class="cat">Animation</span>GSAP</div>
+      <div class="stack-item reveal"><span class="cat">Framework</span>React</div>
+      <div class="stack-item reveal"><span class="cat">Framework</span>Vue</div>
+      <div class="stack-item reveal"><span class="cat">Build</span>Vite</div>
+      <div class="stack-item reveal"><span class="cat">VCS</span>Git / GitHub</div>
+      <div class="stack-item reveal"><span class="cat">Design</span>Figma</div>
+      <div class="stack-item reveal"><span class="cat">Deploy</span>Vercel / Netlify</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container cta-band-inner">
+    <h2 class="reveal">
+      필요한 서비스가 있다면<br>
+      <span class="gr">지금 이야기를 시작하세요.</span>
+    </h2>
+    <p class="reveal" style="transition-delay:.1s">
+      프로젝트 성격에 맞는 최적의 조합을 제안해 드립니다.
+    </p>
+    <div class="reveal" style="transition-delay:.2s">
+      <a href="mailto:hello@elcostudio.kr" class="btn btn-primary">
+        프로젝트 문의하기 <span class="arr">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="./images/elcostudio_logo.png" alt="footerlogo">
+        </a>
+        <p>전자적 코드 위에 장인정신을 더해, 비즈니스와 사용자를 잇는 웹을 만듭니다.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Studio</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="clients.html">Clients</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@elcostudio.kr">hello@elcostudio.kr</a></li>
+          <li><a href="tel:">+82 · 10 · —</a></li>
+          <li>Seoul, Korea</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 ELCO STUDIO. ALL RIGHTS RESERVED.</span>
+      <span>v1.0 · BUILT WITH CARE</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/common.js"></script>
+<script src="js/services.js"></script>
+</body>
+</html>
